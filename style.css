@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  text-decoration: none;
+  outline: none;
+  font-family: 'Poppins', 'Courier New', Courier, monospace;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: azure;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  max-width: 1000px;
+  width: 100%;
+  /* background-color: grey; */
+}
+
+.container .steps {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+.container .steps .circulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 50px;
+  color: #999;
+  font-size: 22px;
+  font-weight: 500;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 4px solid #e0e0e0;
+  transition: all 200ms ease;
+  transition-delay: 0ms;
+}
+
+.container .steps .circulo.ativo {
+    transition-delay: 100ms;
+  border-color: #4070f4;
+  color: #4070f4;
+}
+
+.container .steps .progreco_barra {
+  position: absolute;
+  height: 4px;
+  width: 100%;
+  background-color: #e0e0e0;
+  z-index: -1;
+}
+
+.progreco_barra .indicador {
+  position: absolute;
+  height: 100%;
+  width: 0%;
+  background-color: #4070f4;
+  transition: all 300ms ease;
+}
+
+.container .botoes {
+  display: flex;
+  gap: 20px;
+}
+
+.container .botoes button {
+  padding: 8px 25px;
+  background-color: #4070f4;
+  border: none;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+  box-shadow: 3px 3px 10px 1px rgb(0 0 0 / 35%);
+}
+
+.botoes button:disabled {
+  background-color: #7eb5fd;
+  cursor: not-allowed;
+}
